@@ -1,6 +1,6 @@
 var request = require('request'); 
 const cheerio = require('cheerio')
-const baseUrl = "https://yingyang.911cha.com/top_1.html";
+const baseUrl = "https://yingyang.911cha.com";
 const fs = require('fs');
 let foodList = [];
 let urlList = undefined;
@@ -46,10 +46,10 @@ function startReqBytime(urlList){
         i++;
         if (i > len -1) {
             clearInterval(timer)
-            saveAsJson(foodList,'./result/foodList1.json');
+            saveAsJson(foodList,'./result/foodList.json');
         }
         
-      }, 4000)
+      }, 10000)
 }
 
 fs.readFile('./result/indexList.json','utf8', (err, data) => {

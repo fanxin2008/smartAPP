@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="linearea">
+  </view>
+  <view class="target">
+  </view>
+</view>

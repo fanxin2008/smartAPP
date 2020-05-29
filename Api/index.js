@@ -17,7 +17,7 @@ app.use(session(app))
 app.use(bodyParser())
 const router = require('./router/router')()
 app.use(router.routes()).use(router.allowedMethods());
-var param = process.argv[2];
+var param = process.argv[2] || 1234;
 console.log(param)
 app.listen(param)
 console.log('app start at port' + param);

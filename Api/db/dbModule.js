@@ -44,11 +44,11 @@ const models = {
         },
         name: {type:String},
         weight:{type:Number},
-        id:{type:String,unique:true},
+        id:{type:String},
         userid:{type:String}
     }
 for(var m in models){
-    mongoose.model(m, new Schema(models[m]);
+    mongoose.model(m, new Schema(models[m]));
 }
 module.exports = {
     getModel: function(type){
